@@ -1,0 +1,43 @@
+* {
+  background: none;
+  font-family: "arial";
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+  outline: none;
+  appearance: none;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'arial';
+  height: 100%;
+}
+
+main,
+section {
+    display: block;
+}
+
+button {
+  cursor: pointer;
+}
+
+button[disabled] {
+  cursor: default;
+}
+
+strong {
+  font-weight: 700;
+}
+
+#am-general {
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 0 0 50px;
+}
