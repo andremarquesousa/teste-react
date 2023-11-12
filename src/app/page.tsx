@@ -1,16 +1,9 @@
 'use client';
-import Header from '@/components/Header';
-import List from '../components/List/index';
-import Footer from '@/components/Footer';
+import { redirect } from 'next/navigation';
 
-export default function Home() {
-  return (
-    <>
-      <Header />
-      <main>
-        <List />
-      </main>
-      <Footer />
-    </>
-  )
+const Initial = ({ params }) => {
+  console.log('oi');
+  redirect('/home');
 }
+
+export default Initial;

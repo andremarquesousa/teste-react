@@ -1,7 +1,8 @@
+'use client';
 import React from 'react'
 import { Card } from './style';
 
-export default class Task extends React.Component<any, any> {
+class Task extends React.Component<any, any> {
   constructor(props:any){
     super(props)
     this.state = {}
@@ -13,9 +14,11 @@ export default class Task extends React.Component<any, any> {
         <label>
           <input type="checkbox" />
           <span></span>
+          {this.props.content.name}
         </label>
-        {this.props.content.name}
       </Card>
     );
   }
 }
+
+export default Task;

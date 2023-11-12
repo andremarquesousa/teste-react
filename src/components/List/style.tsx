@@ -15,7 +15,7 @@ export const ListBlock = styled.div`
         max-width: 400px;
         height: 40px;
         margin: 40px auto;
-        padding: 0 20px;
+        padding: 0 10px;
         border: solid 1px #DBDBDB;
         border-radius: 4px;
         position: relative;

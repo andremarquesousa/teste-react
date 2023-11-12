@@ -15,7 +15,9 @@ export const Card = styled.div`
     }
 
     label {
-        margin-right: 20px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
 
         input {
             position: absolute;
@@ -30,6 +32,7 @@ export const Card = styled.div`
             border: solid 2px #ABAAAD;
             transition: border 0.6s;
             position: relative;
+            margin-right: 20px;
 
             &:before {
                 content: '';

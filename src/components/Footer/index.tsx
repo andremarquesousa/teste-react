@@ -1,17 +1,12 @@
-import React from 'react'
+'use client';
 import { FooterBlock } from './style'
 
-export default class Footer extends React.Component<any, any> {
-  constructor(props:any){
-    super(props)
-    this.state = {}
-  }
-
-  render() {
-    return (
-      <FooterBlock>
-        <p>André Marques © Copyright 2023</p>
-      </FooterBlock>
-    );
-  }
+const Footer = () => {
+  return (
+    <FooterBlock>
+      <p>André Marques © Copyright 2023</p>
+    </FooterBlock>
+  );
 }
+
+export default Footer;

@@ -1,8 +1,9 @@
+'use client';
 import React from 'react'
 import Task from "../Task";
 import { ListBlock } from './style';
 
-export default class List extends React.Component<any, any> {
+class List extends React.Component<any, any> {
   constructor(props:any){
     super(props)
     this.state = {
@@ -28,7 +29,7 @@ export default class List extends React.Component<any, any> {
       <ListBlock>
         <h2>Tarefas</h2>
         <select>
-          <option value="" selected>Todas</option>
+          <option defaultValue="">Todas</option>
           <option value="pending">Pendentes</option>
           <option value="completed">Concluídas</option>
         </select>
@@ -41,3 +42,5 @@ export default class List extends React.Component<any, any> {
     );
   }
 }
+
+export default List;
