@@ -1,30 +1,31 @@
 'use client';
 import { checkAuth } from '@/utils/check-auth';
 import { HeaderBlock } from './style'
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
-class Header extends React.Component<any, any> {
-  constructor(props:any) {
-    super(props);
-    this.state = {
-      auth: false
-    };
+const Header = () => {
+  const [ auth, setAuth ] = useState<any>();
+  const authCheck:any = checkAuth();
+  const { push } = useRouter();
+
+  useEffect(() => {
+    setAuth(authCheck);
+  }, [auth, authCheck]);
+
+  
+  const logout = () => {
+    sessionStorage.removeItem("react-token");
+    setAuth(false);
+    push('/login');
   }
 
-  componentDidMount(): void {
-    this.setState({
-      auth: checkAuth()
-    });
-  }
-
-  render() {
-    return (
-      <HeaderBlock>
-        <h1>Teste react</h1>
-        { this.state.auth && <button type="button">Sair</button> }
-      </HeaderBlock>
-    );
-  }
+  return (
+    <HeaderBlock>
+      <h1>Teste react</h1>
+      { auth && <button type="button" onClick={logout}>Sair</button> }
+    </HeaderBlock>
+  );
 }
 
 export default Header;

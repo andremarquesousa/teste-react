@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const Card = styled.div`
     display: flex;
@@ -9,6 +9,7 @@ export const Card = styled.div`
     border-radius: 8px;
     margin: 20px 0 0;
     padding: 0 20px;
+    position: relative;
 
     &:first-child {
         margin-top: 0;
@@ -36,15 +37,12 @@ export const Card = styled.div`
 
             &:before {
                 content: '';
-                background-color: #A7D4FF;
+                background: url('/assets/images/check.svg') no-repeat center / 12px auto;
                 position: absolute;
                 left: 0;
                 top: 0;
-                right: 0;
-                bottom: 0;
-                width: 8px;
-                height: 8px;
-                margin: auto;
+                width: 100%;
+                height: 100%;
                 border-radius: 50%;
                 opacity: 0;
                 transition: opacity 0.6s;
@@ -60,5 +58,19 @@ export const Card = styled.div`
                 }
             }
         }
+    }
+
+    button.am-delete {
+        background: #FBDADA url('/assets/images/remove.svg') no-repeat center / 13px auto;
+        display: block;
+        position: absolute;
+        right: -2px;
+        top: -2px;
+        bottom: 0;
+        font-size: 0;
+        width: 60px;
+        height: calc(100% + 4px);
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
     }
 `

@@ -15,7 +15,7 @@ const Layout = ({children}) => {
     <html lang="en">
       <Head>
         <meta charSet="utf-8" />
-        <link rel="shortcut icon" href="/public/assets/images/favicon.ico" />
+        <link rel="shortcut icon" href="/assets/images/favicon.ico" />
         <meta name="og:title" content="Teste de react" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="og:site_name" content="teste" />

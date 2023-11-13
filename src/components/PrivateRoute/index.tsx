@@ -17,12 +17,7 @@ const PrivateRoute = ({children}: PrivateRouteProps) => {
         }
     }, [auth, push]);
 
-    return (
-        <>
-            {!auth && null}
-            {auth && children}
-        </>
-    )
+    return children
 }
 
 export default PrivateRoute;
