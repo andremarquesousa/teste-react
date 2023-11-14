@@ -26,9 +26,9 @@ const LoginPage = () => {
       </label>
       <label>
         <span className="am-input-label">Senha</span>
-        <input type="password" placeholder="Digite a senha" minLength={8} maxLength={8} {...register("password", {required: true})} />
+        <input type="password" placeholder="Digite a senha" {...register("password", {required: true, minLength: 8, maxLength: 8})} />
       </label>
-      <button type="submit" disabled={!formState.isValid} >Entrar</button>
+      <button type="submit" disabled={!formState.isValid}>Entrar</button>
     </Form>
   )
 }

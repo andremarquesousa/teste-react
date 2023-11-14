@@ -4,12 +4,25 @@ export const Form = styled.form`
     max-width: 500px;
     margin: 40px auto 0;
 
+    @media (max-width: 768px) {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
     label {
         display: block;
         margin: 30px 0 0;
 
         &:first-child {
-            margin-top: 9;
+            margin-top: 0;
+        }
+
+        @media (max-width: 768px) {
+            margin: 20px 0 0;
+
+            &:first-child {
+                margin-top: 0;
+            }
         }
     }
 
@@ -90,6 +103,10 @@ export const Form = styled.form`
             background: #F2F4FA;
             color: #ABAAAD;
             border-color: #F2F4FA;
+        }
+
+        @media (max-width: 768px) {
+            margin: 20px auto 0;
         }
     }
 `

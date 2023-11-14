@@ -4,6 +4,10 @@ export const ListBlock = styled.div`
     max-width: 800px;
     margin: 50px auto 0;
 
+    @media (max-width: 768px) {
+        margin-top: 20px
+    }
+
     h2 {
         color: #FFAD0D;
         text-align: center;
@@ -13,7 +17,13 @@ export const ListBlock = styled.div`
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 40px auto 10px;
+        margin: 40px auto 0;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            margin-top: 20px;
+            padding: 0 20px;
+        }
     }
 
     select {
@@ -25,6 +35,13 @@ export const ListBlock = styled.div`
         border: solid 1px #DBDBDB;
         border-radius: 4px;
         position: relative;
+
+        @media (max-width: 768px) {
+            order: 1;
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+        }
 
         &:after {
             content: '';
@@ -46,6 +63,13 @@ export const ListBlock = styled.div`
         justify-content: space-between;
         max-width: 400px;
         height: 40px;
+
+        @media (max-width: 768px) {
+            order: 2;
+            margin: 20px 0 0;
+            width: 100%;
+            max-width: 100%;
+        }
     
         input {
             background: #FFF;
@@ -99,6 +123,29 @@ export const ListBlock = styled.div`
                 color: #ABAAAD;
                 border-color: #F2F4FA;
             }
+        }
+    }
+
+    .am-list {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: solid 1px #727176;
+
+        @media (max-width: 768px) {
+            padding: 20px 20px 0
+        }
+    
+    }
+
+    .am-without-task {
+        color: #8A898E;
+        font-size: 34px;
+        text-align: center;
+        margin: 15% 0 0;
+
+        @media (max-width: 768px) {
+            font-size: 24px;
+            margin-top: 10%;
         }
     }
 `

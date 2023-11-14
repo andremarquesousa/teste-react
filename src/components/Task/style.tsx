@@ -11,6 +11,12 @@ export const Card = styled.div`
     padding: 0 20px;
     position: relative;
 
+    @media (max-width: 768px) {
+        height: 40px;
+        padding: 0 10px;
+        border-radius: 6px;
+    }
+
     &:first-child {
         margin-top: 0;
     }
@@ -34,6 +40,13 @@ export const Card = styled.div`
             transition: border 0.6s;
             position: relative;
             margin-right: 20px;
+
+            @media (max-width: 768px) {
+                height: 17px;
+                width: 17px;
+                border-width: 1px;
+                margin-right: 10px;
+            }
 
             &:before {
                 content: '';
@@ -61,7 +74,7 @@ export const Card = styled.div`
     }
 
     button.am-delete {
-        background: #FBDADA url('/assets/images/remove.svg') no-repeat center / 13px auto;
+        background: #CC0000 url('/assets/images/remove.svg') no-repeat center / 13px auto;
         display: block;
         position: absolute;
         right: -2px;
@@ -72,5 +85,10 @@ export const Card = styled.div`
         height: calc(100% + 4px);
         border-top-right-radius: 6px;
         border-bottom-right-radius: 6px;
+
+        @media (max-width: 768px) {
+            background-size: 11px auto;
+            width: 40px;
+        }
     }
 `
